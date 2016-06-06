@@ -1,6 +1,6 @@
 package leslie.struct.binarytree;
 
-public class AVLBinaryTree extends BinaryTree{
+public class AVLBinaryTree extends BinaryTree {
 
 
 	private Node rootNode;
@@ -31,6 +31,8 @@ public class AVLBinaryTree extends BinaryTree{
 	public void midOrder(){
 		midOrder(rootNode);
 	}
+
+
 	private Node insert(Node node, int value) {
 
 		if (node == null) {
@@ -57,7 +59,7 @@ public class AVLBinaryTree extends BinaryTree{
 				}
 			}
 		} else {
-
+			System.out.println("插入重复数据");
 		}
 
 		node.height = Math.max(height(node.left), height(node.right)) + 1;
